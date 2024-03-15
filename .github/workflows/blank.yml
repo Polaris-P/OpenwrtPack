@@ -2,7 +2,8 @@ name: Batch Git Clone and Upload
 
 on:
   workflow_dispatch:
-
+permissions:
+  contents: write
 jobs:
   batch_clone_and_upload:
     runs-on: ubuntu-latest
