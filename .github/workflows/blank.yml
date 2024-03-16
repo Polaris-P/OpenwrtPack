@@ -30,4 +30,4 @@ jobs:
       run: |
         git add .
         git commit -m "Batch clone data"
-        git pull --rebase origin master
+        git pull --rebase origin main
