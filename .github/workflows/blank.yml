@@ -19,7 +19,7 @@ jobs:
 
     - name: Clone repositories
       run: |
-        REPO_URLS="https://git.openwrt.org/feed/packages.git https://git.openwrt.org/project/luci.git https://git.openwrt.org/feed/routing.git https://git.openwrt.org/feed/telephony.git"
+        REPO_URLS="git://git.openwrt.org/feed/packages.git git://git.openwrt.org/project/luci.git git://git.openwrt.org/feed/routing.git git://git.openwrt.org/feed/telephony.git"
         CLONE_DIR="/etc/openwrt"
         for repo_url in $REPO_URLS; do
           git clone $repo_url $CLONE_DI
@@ -30,4 +30,4 @@ jobs:
       run: |
         git add .
         git commit -m "Batch clone data"
-        git pull --rebase origin main
+        git pull --rebase origin master
